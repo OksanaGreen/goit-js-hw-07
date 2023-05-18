@@ -39,11 +39,6 @@ function onClick(evt) {
   if (!evt.target.classList.contains("gallery__image")) {
     return;
   }
-
-  //   const currentCard = evt.target.closest(".gallery__image");
-  //   const carId = Number(currentCard.dataset.carId);
-  //   const data = cars.find(({ id }) => id === carId);
-
   const instance = basicLightbox.create(`
   <img class="gallery__image" src = ${evt.target.dataset.source} />
   // <img class="gallery__image" src = evt.carrentTarget.dataset.'${preview}'
@@ -52,14 +47,10 @@ function onClick(evt) {
    `);
   instance.show();
 
-  // const currentIm = evt.target.closest(".gallery__item");
-  // const carId = Number(currentIm.dataset.source);
-  // console.log(carId);
-  // const data = gallery.find(({ source }) => source === carId);
-  // instance.closes();
-  function onClose(evt) {
-    if (evt.code === "Esc") {
-      instance.close();
-    }
-  }
+  const currentIm = evt.target.closest(".gallery__item");
+  const carId = Number(currentIm.dataset.source);
+  console.log(carId);
+  const data = gallery.find(({ source }) => source === carId);
+  instance.closes();
+  //
 }
