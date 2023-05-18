@@ -16,6 +16,11 @@ const galleryMarcup = galleryItems
   )
   .join("");
 gallery.insertAdjacentHTML("beforeend", galleryMarcup);
+const instance = basicLightbox.create(`
+    <img src= ${evt.target.dataset.source}  width="800" height="600">
+`);
+
+instance.show();
 const lightbox = $(".gallery__image").simpleLightbox({
   captionsData: "alt",
   captionDelay: 250,
