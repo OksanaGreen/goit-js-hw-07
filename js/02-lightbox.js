@@ -9,7 +9,7 @@ const galleryMarcup = galleryItems
   .map(
     ({ preview, original, description }) =>
       `<li class="gallery__item">
-    <a class="gallery__link" href='${original}'>
+    <a class="gallery__link" href='${original}' width="800" height="600">
       <img
         class="gallery__image"
         src='${preview}'

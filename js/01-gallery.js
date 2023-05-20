@@ -40,17 +40,15 @@ function onClick(evt) {
     return;
   }
   const instance = basicLightbox.create(`
-  <img class="gallery__image" src = ${evt.target.dataset.source} />
-  // <img class="gallery__image" src = evt.carrentTarget.dataset.'${preview}'
-  //       data-source='${original}'
-  // alt='${description}' />
+  <img class="gallery__image" src ='${evt.target.dataset.source}' />
+  
    `);
   instance.show();
 
-  const currentIm = evt.target.closest(".gallery__item");
-  const carId = Number(currentIm.dataset.source);
-  console.log(carId);
-  const data = gallery.find(({ source }) => source === carId);
-  instance.closes();
-  //
+  // const currentIm = evt.target.closest(".gallery__item");
+  // const carId = Number(currentIm.dataset.source);
+  // console.log(carId);
+  // const data = gallery.find(({ source }) => source === carId);
+  // instance.closes();
+  // //
 }
